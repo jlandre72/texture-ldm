@@ -1,0 +1,16 @@
+###
+### PYTHON UPDATE
+###
+
+### PIP UPDATE
+pip3 install --upgrade pip
+
+source: https://www.pythoncentral.io/how-to-use-pip-simple-guide-to-install-update-uninstall-packages/
+
+
+### PACKAGES UPDATE
+pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
+
+source: https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
+
+
